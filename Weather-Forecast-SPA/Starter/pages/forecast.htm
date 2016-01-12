@@ -9,14 +9,7 @@ How many days? <a href="#/forecast/2" ng-class="{ 'bg-primary': days === '2' }">
 <div ng-repeat="w in weatherResult.list">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3>{{ convertToDate(w.dt) | date: 'MMM d, y' }}</h3>
-                </div>
-                <div class="panel-body">
-                    Daytime temperature: {{ convertToFahrenheit(w.temp.day); }}F
-                </div>
-            </div>
+            <weather-report weather-day="w" convert-to-standard="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDate(date)" date-format="MMM d, y"></weather-report>
         </div>
     </div>
 </div>
