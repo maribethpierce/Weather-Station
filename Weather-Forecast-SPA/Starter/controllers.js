@@ -37,6 +37,4 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
     
     $scope.weatherResult = $scope.weatherAPI.get( { q: $scope.city, cnt: $scope.days, appid: $scope.weatherAPPID });
     
-    console.log($scope.weatherResult);
-    
 }]);
